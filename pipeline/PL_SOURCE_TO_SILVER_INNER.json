@@ -187,10 +187,13 @@
 							"type": "Expression"
 						},
 						"merge_keys": {
-							"value": "@coalesce(activity('Read Table Details').output.firstRow.load_type, '')",
+							"value": "@coalesce(activity('Read Table Details').output.firstRow.load_type,'')",
 							"type": "Expression"
 						},
-						"load_type": "@activity('Read Table Details').output.firstRow.load_type"
+						"load_type": {
+							"value": "@activity('Read Table Details').output.firstRow.load_type",
+							"type": "Expression"
+						}
 					}
 				},
 				"linkedServiceName": {
