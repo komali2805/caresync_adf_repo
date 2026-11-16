@@ -425,7 +425,10 @@
 									"value": "@coalesce(activity('Read Table Details').output.firstRow.load_type, '')",
 									"type": "Expression"
 								},
-								"load_type": "@activity('Read Table Details').output.firstRow.load_type"
+								"load_type": {
+									"value": "@activity('Read Table Details').output.firstRow.load_type",
+									"type": "Expression"
+								}
 							}
 						},
 						"linkedServiceName": {
@@ -632,7 +635,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/PLSOURCE_TO_SILVER_MAIN')]",
+			"name": "[concat(parameters('factoryName'), '/PL_SOURCE_TO_SILVER_MAIN')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -799,14 +802,6 @@
 					"adf_run_id": {
 						"type": "string",
 						"defaultValue": "a5"
-					}
-				},
-				"variables": {
-					"test": {
-						"type": "String"
-					},
-					"test1": {
-						"type": "String"
 					}
 				},
 				"annotations": []
