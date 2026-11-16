@@ -162,14 +162,6 @@
 				"defaultValue": "a5"
 			}
 		},
-		"variables": {
-			"test": {
-				"type": "String"
-			},
-			"test1": {
-				"type": "String"
-			}
-		},
 		"annotations": []
 	}
 }
