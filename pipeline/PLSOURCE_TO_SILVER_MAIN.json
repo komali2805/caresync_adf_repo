@@ -50,7 +50,7 @@
 					},
 					"activities": [
 						{
-							"name": "Ingest from Source to Silver ",
+							"name": "Ingest from Source to Silver",
 							"type": "ExecutePipeline",
 							"dependsOn": [
 								{
@@ -116,7 +116,7 @@
 							"type": "Script",
 							"dependsOn": [
 								{
-									"activity": "Ingest from Source to Silver ",
+									"activity": "Ingest from Source to Silver",
 									"dependencyConditions": [
 										"Failed"
 									]
