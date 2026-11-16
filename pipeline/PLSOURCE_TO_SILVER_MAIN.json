@@ -48,13 +48,14 @@
 						"value": "@activity('Read Source Tables List').output.value",
 						"type": "Expression"
 					},
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "Ingest from Source to Silver",
 							"type": "ExecutePipeline",
 							"dependsOn": [
 								{
-									"activity": "Insert IN Progress Status",
+									"activity": "Insert In Progress Status",
 									"dependencyConditions": [
 										"Succeeded"
 									]
@@ -83,7 +84,7 @@
 							}
 						},
 						{
-							"name": "Insert IN Progress Status",
+							"name": "Insert In Progress Status",
 							"type": "Script",
 							"dependsOn": [],
 							"policy": {
